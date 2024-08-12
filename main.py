@@ -50,7 +50,10 @@ y = y.apply(lambda x: 1 if x > 0 else 0)
 # train and evaluate models
 # Convert column names to strings to satisfy scikit-learn's requirements
 X.columns = X.columns.astype(str)
-trainer = ModelTrainer(X, y, csv_results='model_comparison_results.csv')
+# Initialize the ModelTrainer class with the data and hyperparameters
+# you can use the default hyperparameters or specify your own hyperparameters for each model
+trainer = ModelTrainer(X, y, csv_results= 'model_comparison_results.csv'  ,
+                       logistic_regression_params={'C': [0.001, 0.01, 0.1, 1, 10, 100], 'penalty': ['l1', 'l2']},)
 results = trainer.train_and_evaluate()
 for model_result in results:
     print(f"Results for {model_result['Model']}:")
