@@ -1,6 +1,7 @@
-# Heart Disease Prediction Model
+# Data science Machine Learning initial training
 
-This project trains and evaluates multiple machine learning models on the heart disease dataset from the UCI Machine Learning Repository. The goal is to get initial results for predicting heart disease based on various features.
+This project trains and evaluates multiple machine learning models on any classification data after preprocessing.
+The used example dataset is the heart disease dataset from the UCI Machine Learning Repository. The goal is to get initial results for predicting heart disease based on various features. the discription of the dataset can be found here: https://archive.ics.uci.edu/dataset/45/heart+disease
 
 ## Overview
 
