@@ -30,27 +30,29 @@ pip install -r requirements.txt
 ## Models
 The models used in this code are:
 
-1. Logistic Regression: This model uses the LogisticRegression class from scikit-learn. It is trained with different values of the regularization parameter C.
+1. **Logistic Regression**: This model uses the LogisticRegression class from scikit-learn. It is trained with different values of the regularization parameter C.
 
-2. Decision Tree: This model uses the DecisionTreeClassifier class from scikit-learn. It is trained with different values of the maximum depth parameter.
+2. **Decision Tree**: This model uses the DecisionTreeClassifier class from scikit-learn. It is trained with different values of the maximum depth parameter.
 
-3. Random Forest: This model uses the RandomForestClassifier class from scikit-learn. It is trained with different values of the number of estimators parameter.
+3. **Random Forest**: This model uses the RandomForestClassifier class from scikit-learn. It is trained with different values of the number of estimators parameter.
 
-4. Support Vector Machine: This model uses the SVC class from scikit-learn. It is trained with different values of the regularization parameter C and the kernel parameter.
+4. **Support Vector Machine**: This model uses the SVC class from scikit-learn. It is trained with different values of the regularization parameter C and the kernel parameter.
 
-5. k-Nearest Neighbors: This model uses the KNeighborsClassifier class from scikit-learn. It is trained with different values of the number of neighbors parameter.
+5. **k-Nearest Neighbors**: This model uses the KNeighborsClassifier class from scikit-learn. It is trained with different values of the number of neighbors parameter.
 
-6. Naive Bayes: This model uses the GaussianNB class from scikit-learn. It does not have any hyperparameters.
+6. **Naive Bayes**: This model uses the GaussianNB class from scikit-learn. It does not have any hyperparameters.
 
-7. Gradient Boosting: This model uses the GradientBoostingClassifier class from scikit-learn. It is trained with different values of the number of estimators parameter.
+7. **Gradient Boosting**: This model uses the GradientBoostingClassifier class from scikit-learn. It is trained with different values of the number of estimators parameter.
 
-8. XGBoost: This model uses the XGBClassifier class from the XGBoost library. It is trained with different values of the number of estimators parameter.
+8. **XGBoost**: This model uses the XGBClassifier class from the XGBoost library. It is trained with different values of the number of estimators parameter.
 
-9. LightGBM: This model uses the LGBMClassifier class from the LightGBM library. It is trained with different values of the number of estimators parameter.
+9. **LightGBM**: This model uses the LGBMClassifier class from the LightGBM library. It is trained with different values of the number of estimators parameter.
 
-Additionally, there is a neural network model implemented using Keras. It consists of two dense layers with ReLU activation and a sigmoid output layer. The model is trained using the Adam optimizer and binary cross-entropy loss.
+Additionally, there is a **neural network model** implemented using Keras. It consists of two dense layers with ReLU activation and a sigmoid output layer. The model is trained using the Adam optimizer and binary cross-entropy loss.
 
-The results for each model, including the best parameters, accuracy, precision, recall, F1 score, and confusion matrix, are printed in the code.
+## Data
+The data used in this code is the heart disease dataset from the UCI Machine Learning Repository. It contains 303 samples with 14 features each. The goal is to predict the presence of heart disease based on the features.
+
 
 
 ## Results
@@ -62,3 +64,6 @@ The results for each model include:
 4. Recall
 5. F1 Score
 6. Confusion Matrix
+
+## License
+This project is licensed under the MIT License.
