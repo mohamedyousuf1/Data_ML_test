@@ -9,23 +9,8 @@ The code performs the following steps since it uses the heart disease dataset as
 1. Fetches the heart disease dataset from the UCI Machine Learning Repository.
 2. Preprocesses the data by filling missing values and converting the target variable to binary.
 3. Trains and evaluates multiple models using the `ModelTrainer` class.
-4. Prints the results for each model, including the best parameters, accuracy, precision, recall, F1 score, and confusion matrix.
+4. Exports the results for each model in one CSV file, including the best parameters, accuracy, precision, recall, F1 score, and confusion matrix.
 
-## Example Usage
-
-1. Import the `ModelTrainer` class from the `ModelTrainer` module.
-2. Fetch the heart disease dataset using the `fetch_ucirepo` function.
-3. Preprocess the data by filling missing values and converting the target variable to binary.
-4. Train and evaluate models using the `ModelTrainer` class.
-5. Print the results for each model.
-
-## Prerequisites
-
-Make sure to have the necessary modules and packages installed before running the code. You can install the required packages using:
-
-```bash
-pip install -r requirements.txt
-```
 
 ## Models
 The models used in this code are:
@@ -49,6 +34,14 @@ The models used in this code are:
 9. **LightGBM**: This model uses the LGBMClassifier class from the LightGBM library. It is trained with different values of the number of estimators parameter.
 
 Additionally, there is a **neural network model** implemented using Keras. It consists of two dense layers with ReLU activation and a sigmoid output layer. The model is trained using the Adam optimizer and binary cross-entropy loss.
+## Prerequisites
+
+Make sure to have the necessary modules and packages installed before running the code. You can install the required packages using:
+
+```bash
+pip install -r requirements.txt
+```
+
 
 ## Data
 The data used in this code is the heart disease dataset from the UCI Machine Learning Repository. It contains 303 samples with 14 features each. The goal is to predict the presence of heart disease based on the features.
@@ -64,6 +57,14 @@ The results for each model include:
 4. Recall
 5. F1 Score
 6. Confusion Matrix
+
+Also, each result metric will be saved in a figure under the metric name, for example, here is the F1 score for the result:
+
+![The comparision between the choosen models in F! score using the corresponding dataset](f1_score_barplot.png)
+
+And the following is the confusion matrix for one of the chosen model, all models confusion matrices will be plotted:
+
+![confusion matrix example](confusion_matrices\LightGBM_confusion_matrix.png)
 
 ## License
 This project is licensed under the MIT License.

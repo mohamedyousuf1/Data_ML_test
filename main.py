@@ -1,6 +1,8 @@
 
 
 from ModelTrainer import ModelTrainer
+from Figure_saver import ModelFiguresSaver
+import pandas as pd
 """
 This code trains and evaluates multiple models on any datasets to get a simple initial results, the heart disease dataset is used as just an example.
 The code performs the following steps:
@@ -52,7 +54,11 @@ y = y.apply(lambda x: 1 if x > 0 else 0)
 X.columns = X.columns.astype(str)
 # Initialize the ModelTrainer class with the data and hyperparameters
 # you can use the default hyperparameters or specify your own hyperparameters for each model
-trainer = ModelTrainer(X, y, csv_results= 'model_comparison_results.csv'  ,
+
+# choose csv file name to save the results
+csv_file =  'model_comparison_results.csv'
+
+trainer = ModelTrainer(X, y, csv_results= csv_file ,
                        logistic_regression_params={'C': [0.001, 0.01, 0.1, 1, 10, 100], 'penalty': ['l1', 'l2']},)
 results = trainer.train_and_evaluate()
 for model_result in results:
@@ -65,3 +71,8 @@ for model_result in results:
     print(f"Confusion Matrix:\n{model_result['Confusion Matrix']}")
     # print(f"Classification Report:\n{model_result['Classification Report']}")
     print("\n")
+
+# draw figures and save them
+results = pd.read_csv(csv_file)
+#save figures
+ModelFiguresSaver(data=results).save_all_figures()

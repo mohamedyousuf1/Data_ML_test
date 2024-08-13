@@ -14,32 +14,32 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Input
 
-"""
-ModelTrainer class for training and evaluating various machine learning models.
-Attributes:
-    X_train (numpy.ndarray): Training data features.
-    X_test (numpy.ndarray): Testing data features.
-    y_train (numpy.ndarray): Training data labels.
-    y_test (numpy.ndarray): Testing data labels.
-    models (dict): Dictionary of machine learning models and their corresponding hyperparameters.
-Methods:
-    _build_and_train_neural_network(params): Builds and trains a neural network model.
-    train_and_evaluate(): Trains and evaluates all the machine learning models and the neural network.
-Returns:
-    list: List of dictionaries containing the evaluation results for each model.
-Default hyperparameters for each model are provided, but custom hyperparameters can be passed as arguments.
-the default hyperparameters are:
-    Logistic Regression: {'C': [0.01, 0.1, 1, 10]}
-    Decision Tree: {'max_depth': [5, 10, 15]}
-    Random Forest: {'n_estimators': [50, 100, 150]}
-    Support Vector Machine: {'C': [0.1, 1, 10], 'kernel': ['linear', 'rbf']}
-    k-Nearest Neighbors: {'n_neighbors': [3, 5, 7]}
-    Gradient Boosting: {'n_estimators': [50, 100, 150]}
-    XGBoost: {'n_estimators': [50, 100, 150]}
-    LightGBM: {'n_estimators': [50, 100, 150]}
-"""
+
 class ModelTrainer:
-    
+    """
+    ModelTrainer class for training and evaluating various machine learning models.
+    Attributes:
+        X_train (numpy.ndarray): Training data features.
+        X_test (numpy.ndarray): Testing data features.
+        y_train (numpy.ndarray): Training data labels.
+        y_test (numpy.ndarray): Testing data labels.
+        models (dict): Dictionary of machine learning models and their corresponding hyperparameters.
+    Methods:
+        _build_and_train_neural_network(params): Builds and trains a neural network model.
+        train_and_evaluate(): Trains and evaluates all the machine learning models and the neural network.
+    Returns:
+        list: List of dictionaries containing the evaluation results for each model.
+    Default hyperparameters for each model are provided, but custom hyperparameters can be passed as arguments.
+    the default hyperparameters are:
+        Logistic Regression: {'C': [0.01, 0.1, 1, 10]}
+        Decision Tree: {'max_depth': [5, 10, 15]}
+        Random Forest: {'n_estimators': [50, 100, 150]}
+        Support Vector Machine: {'C': [0.1, 1, 10], 'kernel': ['linear', 'rbf']}
+        k-Nearest Neighbors: {'n_neighbors': [3, 5, 7]}
+        Gradient Boosting: {'n_estimators': [50, 100, 150]}
+        XGBoost: {'n_estimators': [50, 100, 150]}
+        LightGBM: {'n_estimators': [50, 100, 150]}
+    """
     def __init__(self, X, y, csv_results='model_comparison_results.csv',
                  logistic_regression_params=None,
                  decision_tree_params=None,
