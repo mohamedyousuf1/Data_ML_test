@@ -62,9 +62,5 @@ Also, each result metric will be saved in a figure under the metric name, for ex
 
 ![The comparision between the choosen models in F! score using the corresponding dataset](f1_score_barplot.png)
 
-And the following is the confusion matrix for one of the chosen model, all models confusion matrices will be plotted:
-
-![confusion matrix](confusion_matrices\LightGBM_confusion_matrix.png)
-
 ## License
 This project is licensed under the MIT License.
